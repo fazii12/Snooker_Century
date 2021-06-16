@@ -18,7 +18,7 @@ The score of each player is initialized with 0 and as the balls are potted their
 My project actually manages the score and updates the position of every player in the game 
 
 Working
-At first it asks you to select an option either to start a game or just simply exit.
+At first it asks you to select an option either to start a game or just simply save (not implemented in the code).
 Afterwards it asks for number of players (2-10),
 Asks for Winning threshold (after how many players scoring 100 the game will end?)
 Asks for Winning score (usually its 100 but for ease of time sometimes less than 100 is also considered)
