@@ -28,15 +28,15 @@ Initial board can be seen with 0 score assigned to every player.
 Score is entered turn wise for every player and it goes on until winning threshold is not achieved.
 
 Compilation Instructions
-1.	Use IDE such as Visual Studio C++ with g++ compiler
+1.	Use IDE such as Visual Studio C++ 
 OR 
-2.	Place files in a folder, Open command prompt, change directory to containing folder and use commands 
+2.	Place files in a folder, open command prompt, change directory to containing folder and use commands 
 
 For compiling :
  g++ -c *.cpp -o compiledprogram
 
 Run:
-./compiledprogram
+.\compiledprogram
 
 
 
