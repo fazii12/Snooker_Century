@@ -5,7 +5,7 @@ Snooker Century Score Management (Console Based Desktop Application)
 
 Introduction
 Snooker Century is variant of game Snooker played by atleast 2 players and max 10 players. 
-The players play on their turn which is decided randomly at the start of the game. There are total 8 balls used in which white is also included, the score of each ball is given below.
+The players play on their turn which is decided randomly at the start of the game. There are total 8 balls used including white ball, the score of each ball is given below.
 Yellow	2
 Green	3
 Brown	4
