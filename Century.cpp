@@ -6,7 +6,7 @@ string style(char a, int n) {
 	if (n > 0) {
 
 		for (int i = 0; i < n; i++)
-			s = s + a;
+			s += a;
 	}
 	return s;
 }
@@ -353,11 +353,11 @@ void Game::play() {
 	} while (players.get_no_of_players() != temp);
 
 	system("cls");
-	show_final_results(players_won);
+	showFinalResults(players_won);
 }
 
 
-void Game::show_final_results(int n) {
+void Game::showFinalResults(int n) {
 	if (winners_list != nullptr) {
 
 		cout << "---------------------------------------------------------Final Results---------------------------------------------------------\n\n";

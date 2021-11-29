@@ -82,10 +82,12 @@ public:
 	void list_to_arr();
 	void show_Scorecard();
 	void play();
-	void show_final_results(int);
+	void showFinalResults(int);
 
 
 };
+
+
 
 
 
