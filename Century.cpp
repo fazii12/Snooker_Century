@@ -8,7 +8,7 @@ bool isNumber(const string& str)
 	}
     
 	for (; str[i] != '\0' ; i++) {
-        if (std::isdigit(str[i]) == 0) return false;
+        if (isdigit(str[i]) == 0) return false;
     }
     return true;
 }
