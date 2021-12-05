@@ -81,7 +81,7 @@ public:
 	Game();
 	void list_to_arr();
 	void show_Scorecard();
-	void play();
+	void startRecording();
 	void showFinalResults(int);
 
 

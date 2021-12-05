@@ -1,5 +1,12 @@
 #include "Century.h"
 
+bool isNumber(const string& str)
+{
+    for (char const &c : str) {
+        if (std::isdigit(c) == 0) return false;
+    }
+    return true;
+}
 
 string style(char a, int n) {
 	string s = "";
@@ -208,7 +215,6 @@ Player_list::~Player_list() {
 		Player* temp = front->get_next();
 
 		while (temp != front) {
-			cout << "deleting " << temp->get_fullname() << endl;
 			del_Player(temp);
 		}
 
@@ -255,7 +261,7 @@ void Game::show_Scorecard() {
 
 
 
-void Game::play() {
+void Game::startRecording() {
 
 	bool out_of_the_game = false;
 	int no_of_players, winning_threshold, winning_score;
@@ -320,8 +326,30 @@ void Game::play() {
 		list_to_arr();
 		cout << "\n\nOn Going\n\n";
 		show_Scorecard();
+		
+		
+		string curr_score;
 		cout << current_player->get_fullname() << "'s turn\t:\t";
-		cin >> current_players_score;
+		cin >> curr_score;
+
+		stringstream _stoi(curr_score);
+			
+		_stoi >> current_players_score;
+	
+		while(!isNumber(curr_score) || current_players_score > winning_score+10){
+			cout<<"Invalid score entered, enter again\n";
+			cout << current_player->get_fullname() << "'s turn\t:\t";
+			cin >> curr_score;
+
+			_stoi.clear();
+			_stoi.str(curr_score);
+			
+			_stoi >> current_players_score;
+	
+		}
+
+		
+		
 
 		if (bb <= current_players_score) {
 			bb = current_players_score;
@@ -331,6 +359,7 @@ void Game::play() {
 			wb = current_players_score;
 			wbname = current_player->get_fullname();
 		}
+
 
 		current_player->update_scores(current_players_score);
 		if (current_player->getbestbreak() < current_players_score)

@@ -22,7 +22,7 @@ int main() {
 
 			Game G;
 
-			G.play();
+			G.startRecording();
 		}
 	}
 	catch (exception ex) {
