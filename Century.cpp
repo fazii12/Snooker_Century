@@ -7,9 +7,9 @@ bool isNumber(const string& str)
 		i = 1; 
 	}
     
-	for (; str[i] != '\0' ; i++) {
-        if (isdigit(str[i]) == 0) return false;
-    }
+	for (; str[i] != '\0' ; i++)
+		if (isdigit(str[i]) == 0) return false;
+    
     return true;
 }
 
