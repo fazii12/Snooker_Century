@@ -1,18 +1,5 @@
 #include "Century.h"
 
-bool isNumber(const string& str)
-{
-	int i = 0;
-	if(str[0] == '-'){
-		i = 1; 
-	}
-    
-	for (; str[i] != '\0' ; i++)
-		if (isdigit(str[i]) == 0) return false;
-    
-    return true;
-}
-
 string style(char a, int n) {
 	string s = "";
 	if (n > 0) {
@@ -328,34 +315,16 @@ void Game::startRecording() {
 			cout << "\nWorst Break\t\t" << wbname << "\t " << wb << endl;
 		}
 
-		list_to_arr();
+		
+		list_to_arr();		// Copy elements of players_list to array
 		cout << "\n\nOn Going\n\n";
 		show_Scorecard();
 		
-		
-		string curr_score;
+	
 		cout << current_player->get_fullname() << "'s turn\t:\t";
-		cin >> curr_score;
+		cin >> current_players_score;
 
-		stringstream _stoi(curr_score);
-			
-		_stoi >> current_players_score;
 	
-		while(!isNumber(curr_score) || current_players_score > winning_score+10){
-			cout<<"Invalid score entered, enter again\n";
-			cout << current_player->get_fullname() << "'s turn\t:\t";
-			cin >> curr_score;
-
-			_stoi.clear();
-			_stoi.str(curr_score);
-			
-			_stoi >> current_players_score;
-	
-		}
-
-		
-		
-
 		if (bb <= current_players_score) {
 			bb = current_players_score;
 			bbname = current_player->get_fullname();
