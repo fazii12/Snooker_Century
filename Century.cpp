@@ -295,7 +295,7 @@ void Game::startRecording() {
 	float avg;
 	string wbname, bbname;
 
-	int temp = no_of_players - winning_threshold;
+	
 
 	do {
 		system("cls");
@@ -353,7 +353,7 @@ void Game::startRecording() {
 
 
 
-	} while (players.get_no_of_players() != temp);
+	} while (players.get_no_of_players() != no_of_players - 1);
 
 	system("cls");
 	showFinalResults(players_won);
